@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lvparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssetNotFoundCommentsActivity">
+
+    <TextView
+        android:id="@+id/lblUser9"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="47dp"
+        android:gravity="center|left"
+        android:paddingLeft="20dp"
+        android:text="Comments"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/txtNotFoundCommentsSerialNumber" />
+
+    <TextView
+        android:id="@+id/lblUser8"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center|left"
+        android:paddingLeft="20dp"
+        android:text="Asset Serial Number"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/fragment11" />
+
+    <EditText
+        android:id="@+id/txtNotFoundCommentsSerialNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:text="213456"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/lblUser8" />
+
+    <Button
+        android:id="@+id/btnNotFoundCommentsSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="52dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="doSaveAndClose"
+        android:text="Save and Close"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/txtNotFoundComments" />
+
+    <fragment
+        android:id="@+id/fragment11"
+        android:name="sg.com.ocs.halassetmgmt.PlantLocationFragment"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment10" />
+
+    <EditText
+        android:id="@+id/txtNotFoundComments"
+        android:layout_width="0dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNotFoundCommentsSave"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/lblUser9" />
+
+    <fragment
+        android:id="@+id/fragment10"
+        android:name="sg.com.ocs.halassetmgmt.HeaderFragment"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssetInfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lvparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        tools:context=".AssetInfoActivity">
+
+        <ImageView
+            android:id="@+id/imgAssetWithNoIssuesComments"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:onClick="doAddAssetWithNoIssuesComments"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintTop_toBottomOf="@+id/txtComments"
+            app:srcCompat="@drawable/commentsicon80" />
+
+        <ImageView
+            android:id="@+id/imgAssetWithNoIssuesTick"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="doAssetWithNoissuesTick"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg1"
+            app:layout_constraintTop_toBottomOf="@+id/txtComments"
+            app:srcCompat="@drawable/greentick80" />
+
+        <TextView
+            android:id="@+id/lblUser14"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="44dp"
+            android:background="@drawable/textview_border"
+            android:gravity="center|left"
+            android:paddingLeft="2dp"
+            android:text="Asset with no issues :"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgAssetWithNoIssuesTick"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/txtComments" />
+
+        <ImageView
+            android:id="@+id/imgAssetInUseComments"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:onClick="doAddAssetInUseComments"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintTop_toBottomOf="@+id/imgCostCntrEdit"
+            app:srcCompat="@drawable/commentsicongreen80" />
+
+        <ImageView
+            android:id="@+id/imgAssetInUseTick"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:onClick="doAssetInUseTick"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg1"
+            app:layout_constraintTop_toBottomOf="@+id/imgCostCntrTick"
+            app:srcCompat="@drawable/greentick80" />
+
+        <TextView
+            android:id="@+id/lblUser13"
+            android:layout_width="215dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="44dp"
+            android:background="@drawable/textview_border"
+            android:gravity="center|left"
+            android:onClick="showComments"
+            android:paddingLeft="2dp"
+            android:text="Asset In Use :"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgAssetInUseTick"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/txtCostCenterName" />
+
+        <ImageView
+            android:id="@+id/imgCostCntrEdit"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:onClick="doEditCC"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser12"
+            app:srcCompat="@drawable/geenpenicon80" />
+
+        <ImageView
+            android:id="@+id/imgCostCntrTick"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:onClick="doCostCntrTick"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg1"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser12"
+            app:srcCompat="@drawable/greentick80" />
+
+        <EditText
+            android:id="@+id/txtCostCentre"
+            android:layout_width="209dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/textview_border"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgCostCntrTick"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser12" />
+
+        <TextView
+            android:id="@+id/lblUser12"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center|left"
+            android:paddingLeft="2dp"
+            android:text="Cost Centre / Name:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/txtDesc" />
+
+        <TextView
+            android:id="@+id/lblUser11"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center|left"
+            android:paddingLeft="2dp"
+            android:text="Description :"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/imgSerialNbrEdit" />
+
+        <ImageView
+            android:id="@+id/imgSerialNbrEdit"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:onClick="doEditSerialtNumber"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser"
+            app:srcCompat="@drawable/geenpenicon80" />
+
+        <ImageView
+            android:id="@+id/imgSerialNbrTick"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:onClick="doSerialNumberTick"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg1"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser"
+            app:srcCompat="@drawable/greentick80" />
+
+        <EditText
+            android:id="@+id/txtSerialNumber"
+            android:layout_width="209dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/textview_border"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgSerialNbrTick"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser" />
+
+        <ImageView
+            android:id="@+id/imgAssetNbrTick"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg1"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser10"
+            app:srcCompat="@drawable/graytick80" />
+
+        <ImageView
+            android:id="@+id/imgAssetNbrEdit"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:onClick="doEditAssetNumber"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser10"
+            app:srcCompat="@drawable/geenpenicon80" />
+
+        <TextView
+            android:id="@+id/lblUser"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center|left"
+            android:paddingLeft="2dp"
+            android:text="Serial Number"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/imgAssetNbrTick" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="169dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="doSave"
+            android:text="Next"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.569"
+            app:layout_constraintStart_toEndOf="@+id/button12"
+            app:layout_constraintTop_toTopOf="@+id/hGuideMainBottom" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="doSave"
+            android:text="Save"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hGuideMainBottom" />
+
+        <TextView
+            android:id="@+id/lblUser10"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center|left"
+            android:paddingLeft="2dp"
+            android:text="Asset Number"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/fragment13" />
+
+        <EditText
+            android:id="@+id/txtAssetNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginBottom="21dp"
+            android:background="@drawable/textview_border"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lblUser"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideImg1"
+            app:layout_constraintHorizontal_bias="0.137"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser10"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <fragment
+            android:id="@+id/fragment13"
+            android:name="sg.com.ocs.halassetmgmt.PlantLocationFragment"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment12" />
+
+        <ImageView
+            android:id="@+id/imgDescTick"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:onClick="doDescTick"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg1"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser11"
+            app:srcCompat="@drawable/greentick80" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vGuideMainLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vGuideMainRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <ImageView
+            android:id="@+id/imgDescEdit"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:onClick="doEditDesc"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintStart_toStartOf="@+id/vGuideImg2"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser11"
+            app:srcCompat="@drawable/geenpenicon80" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hGuideMainBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="790dp" />
+
+        <EditText
+            android:id="@+id/txtDesc"
+            android:layout_width="217dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="42dp"
+            android:background="@drawable/textview_border"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:paddingLeft="10dp"
+            android:scrollIndicators="bottom|right"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/imgDescTick"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser11" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vGuideImg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="346dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vGuideImg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="262dp" />
+
+        <fragment
+            android:id="@+id/fragment12"
+            android:name="sg.com.ocs.halassetmgmt.HeaderFragment"
+            android:layout_width="0dp"
+            android:layout_height="135dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtComments"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/textview_border"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:padding="10dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/lblUser13" />
+
+        <EditText
+            android:id="@+id/txtAssetWithNoIssuesComments"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/textview_border"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/imgAssetWithNoIssuesComments" />
+
+        <TextView
+            android:id="@+id/txtCostCenterName"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="5dp"
+            android:text="cc name"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/vGuideMainRight"
+            app:layout_constraintStart_toStartOf="@+id/vGuideMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/txtCostCentre" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

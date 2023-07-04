@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lvparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssetNotFoundActivity">
+
+    <Button
+        android:id="@+id/btnAssetNotFoundCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="doCancel"
+        android:text="Cancel"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/btnAssetNotFoundAddComments"
+        app:layout_constraintVertical_bias="0.322" />
+
+    <TextView
+        android:id="@+id/lblAssetNotFound"
+        android:layout_width="0dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center|left"
+        android:paddingLeft="20dp"
+        android:text="Asset Not Found !"
+        android:textAlignment="center"
+        android:textColor="#E90C0C"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/txtSlNo" />
+
+    <TextView
+        android:id="@+id/lblUser6"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="82dp"
+        android:gravity="center|left"
+        android:paddingLeft="20dp"
+        android:text="Asset Serial Number"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/fragment9" />
+
+    <EditText
+        android:id="@+id/txtSlNo"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:text="213456"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/lblUser6" />
+
+    <Button
+        android:id="@+id/btnAssetNotFoundAddComments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="doAddComments"
+        android:text="Add Comment"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/lblAssetNotFound" />
+
+    <fragment
+        android:id="@+id/fragment9"
+        android:name="sg.com.ocs.halassetmgmt.PlantLocationFragment"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <fragment
+        android:id="@+id/fragment8"
+        android:name="sg.com.ocs.halassetmgmt.HeaderFragment"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
